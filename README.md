@@ -10,3 +10,4 @@ O FloatingActionButton utiliza de animação para esconder o conteúdo da tela a
 
 A partir de agora, é possível a funcionalidade de adicionar tarefas, com seus nomes e dificuldades, no momento, ainda está estático.
 Outra possibilidade para este app seria que ao clicar no card, abre uma lista de tarefas especificas (que podem ser definidas pelo usuario, na hora da criação e ao passar de nível), que ao serem completas, o usuário passa de nível, e não simplesmente em clicar no botão).
+E, claro, podia deixar lindo.
