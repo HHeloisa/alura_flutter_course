@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_project/constants.dart';
-import 'package:task_project/screens/form_screen.dart';
+import 'package:task_project/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FormScreen(),
+      home: const Home(),
     );
   }
 }

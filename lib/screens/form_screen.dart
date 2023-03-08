@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_project/constants.dart';
-import '../constants.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({super.key});
@@ -22,6 +21,7 @@ class _FormScreenState extends State<FormScreen> {
     return Form(
       key: _formKey,
       child: Scaffold(
+        backgroundColor: Colors.pink[100],
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           title: Text(newTask),
@@ -118,13 +118,14 @@ class _FormScreenState extends State<FormScreen> {
                   ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          print(nameController.text);
-                          print(int.parse(difficultyController.text));
-                          print(imageController.text);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                  content: Text("Salvando novo conhecimento")));
+                          Navigator.pop(context);
                         }
                         
                       },
-                      child: const Text("adicionar"))
+                      child: const Text("Adicionar"))
                 ],
               ),
             ),
