@@ -1,4 +1,14 @@
 Este projeto está sendo desenvolvido ao longo do curso de Flutter da Alura.
+Etapas do curso concluídas:
+✅Flutter: Controller, navegação e estados;
+✅Flutter: widgets, stateless, stateful, imagens e animações;
+👩🏽‍💻Flutter: aplicando persistência de estado.
+⏲️Flutter com WebAPI: integrando sua aplicação.
+⏲️Flutter com WebAPI: evoluindo na integrando da aplicação.
+⏲️Flutter: estilizando e reproduzindo layouts.
+⏲️Flutter: aplicando constraints e implementando layouts responsivos.
+
+
 Nele, cria-se cards que registram seu progresso de conhecimento em determinados assuntos.
 O nível de dificuldade desta aprendizagem.
 Quanto maior o nível de dificuldade, mais levels é possível subir.
