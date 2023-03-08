@@ -4,20 +4,18 @@ import '../constants.dart';
 import 'difficulty.dart';
 
 class TaskCard extends StatefulWidget {
-  const TaskCard(
+  TaskCard(
       {super.key, required this.text, required this.difficulty, this.image});
 
   final String text;
   final int difficulty;
   final String? image;
-
+  int nivel = 0;
   @override
   State<TaskCard> createState() => _TaskCardState();
 }
 
 class _TaskCardState extends State<TaskCard> {
-  // colocar as variaevis pra cima do override se seus valores nao devem ser perdidos ao remontar a tela por uma atualização de widget
-  int nivel = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -49,7 +47,7 @@ class _TaskCardState extends State<TaskCard> {
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: Image.network(
-                              imageByLevel(nivel, widget.image),
+                              imageByLevel(widget.nivel, widget.image),
                               fit: BoxFit.cover)),
                     ),
                     Column(
@@ -74,7 +72,7 @@ class _TaskCardState extends State<TaskCard> {
                       child: ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              nivel++;
+                              widget.nivel++;
                             });
                           },
                           child: Column(
@@ -101,13 +99,13 @@ class _TaskCardState extends State<TaskCard> {
                       child: LinearProgressIndicator(
                         color: Colors.white,
                         value: widget.difficulty > 0
-                            ? (nivel / widget.difficulty) / 10
+                            ? (widget.nivel / widget.difficulty) / 10
                             : 1,
                       )),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: Text('Nível: $nivel'),
+                  child: Text('Nível: ${widget.nivel}'),
                 )
               ],
             )
@@ -123,7 +121,8 @@ class _TaskCardState extends State<TaskCard> {
 // também diferente do tutorial, coloquei as imagens como opcionais, se o usuario colocar
 // eu aplico ela, do contrario, mantenho a logica anterior, de imageByLevel.
 String imageByLevel(level, image) {
-  if (image != null) {
+  
+  if (image != null && image.isNotEmpty) {
     return image;
   } else if (level < 5) {
     return charmander;
