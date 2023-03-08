@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 import 'difficulty.dart';
 
 class TaskCard extends StatefulWidget {
@@ -15,7 +14,6 @@ class TaskCard extends StatefulWidget {
 }
 
 class _TaskCardState extends State<TaskCard> {
-
   //colocar as variaevis pra cima do override se seus valores nao devem ser perdidos ao remontar a tela por uma atualização de widget
   int nivel = 0;
   @override
@@ -62,7 +60,9 @@ class _TaskCardState extends State<TaskCard> {
                                   fontSize: 18,
                                   overflow: TextOverflow.fade,
                                 ))),
-                        Difficulty(difficultyLevel: widget.difficulty,)
+                        Difficulty(
+                          difficultyLevel: widget.difficulty,
+                        )
                       ],
                     ),
                     SizedBox(
@@ -114,7 +114,6 @@ class _TaskCardState extends State<TaskCard> {
     );
   }
 }
-
 
 // Inves de seguir o tutorial, que passa imagem por parametro da mesma forma que o nome
 // criei uma função que retorna uma imagem diferente de acordo com o nivel da tarefa.

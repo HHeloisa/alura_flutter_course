@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_project/taskcard.dart';
+import 'package:task_project/components/taskcard.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
         leading: Container(),
       ),
       body: Container(
-        color: Colors.pinkAccent,
+        color: Colors.pinkAccent[100],
         child: AnimatedOpacity(
           opacity: opacidade == true ? 1 : 0,
           duration: const Duration(milliseconds: 800),
