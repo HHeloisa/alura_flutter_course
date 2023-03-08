@@ -22,6 +22,7 @@ class _HomeState extends State<Home> {
       ),
       body: Container(
         color: Colors.pinkAccent[100],
+        padding: const EdgeInsets.only(bottom: 70, top: 12),
         child: ListView(
           children: TaskInherited.of(context).taskList,
         ),

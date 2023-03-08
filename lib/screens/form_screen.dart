@@ -21,6 +21,22 @@ class _FormScreenState extends State<FormScreen> {
   TextEditingController imageController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+
+  bool valueValidator(String? value) {
+    if (value != null && value.isNotEmpty) {
+      return true;
+    }
+    return false;
+  }
+
+  bool difficultyValidator(String? value) {
+    if (valueValidator(value)) {
+      if ((int.parse(value!) < 5) && (int.parse(value) > 0)) {
+        return true;
+      }
+    }
+    return false;
+  }
   // A _formKey é a variavel que armazena a chave do formulario. Ela é a responsavel por disponibilizar acesso
   // as infos, como contexto e conteudo. É utilizada no botão que envia o formulário: _formKey.currentState!.validate()
   @override
@@ -51,7 +67,7 @@ class _FormScreenState extends State<FormScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
                       validator: (String? value) {
-                        if (value != null && value.isEmpty) {
+                        if (!valueValidator(value)) {
                           return "Insira o nome da tarefa";
                         }
                         return null;
@@ -69,9 +85,7 @@ class _FormScreenState extends State<FormScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
                       validator: (value) {
-                        if (value!.isEmpty ||
-                            int.parse(value) > 5 ||
-                            int.parse(value) < 1) {
+                        if (!difficultyValidator(value)) {
                           return "Insira a dificuldade de 1 a 5";
                         }
                         return null;

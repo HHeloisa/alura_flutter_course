@@ -8,13 +8,11 @@ class TaskInherited extends InheritedWidget {
   }) : super(key: key, child: child);
 
   final List<TaskCard> taskList = [
-    const TaskCard(text: "Finalizar curso de flutter da Alura", difficulty: 1),
-    const TaskCard(
-        text: "Finalizar instalação do Android Studio", difficulty: 5),
-    const TaskCard(text: "Finalizar instalação do Flutter", difficulty: 4),
-    const TaskCard(text: "Finalizar curso de flutter da Udemy", difficulty: 9),
-    const TaskCard(
-        text: "Finalizar instalação do Android Studio", difficulty: 7)
+    TaskCard(text: "Finalizar curso de flutter da Alura", difficulty: 1),
+    TaskCard(text: "Finalizar instalação do Android Studio", difficulty: 3),
+    TaskCard(text: "Finalizar instalação do Flutter", difficulty: 2),
+    TaskCard(text: "Finalizar curso de flutter da Udemy", difficulty: 5),
+    TaskCard(text: "Caminhar com a Pacha", difficulty: 1)
   ];
 
   void newTask(String name, int difficulty, String image) {
