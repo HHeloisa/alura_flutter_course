@@ -20,6 +20,9 @@ O FloatingActionButton utiliza para alterar a rota, onde é possível adicionar 
 (funcionalidade removida)
 ![image](https://user-images.githubusercontent.com/78618323/223533328-dbdd9a47-c4cf-40e7-8331-05d949f2d42a.png)
 
-
-Uma possibilidade para este app seria que ao clicar no card, abre uma lista de tarefas especificas (que podem ser definidas pelo usuario, na hora da criação e ao passar de nível), que ao serem completas, o usuário passa de nível, e não simplesmente em clicar no botão).
-E, claro, podia ser lindo.
+Melhorias a serem implementadas:
+- Id nas tarefas;
+- Botão específico para deletar tarefas;
+- Pagina de tarefa, com campo para definição, e todo para que, ao ser completados, passe de level;
+- Armazenar o level no banco de dados;
+- Deixar lindo;
