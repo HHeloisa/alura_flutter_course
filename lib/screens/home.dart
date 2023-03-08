@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_project/components/taskcard.dart';
+import 'package:task_project/data/task_inherited.dart';
 import 'package:task_project/screens/form_screen.dart';
 
 import '../constants.dart';
@@ -23,29 +23,16 @@ class _HomeState extends State<Home> {
       body: Container(
         color: Colors.pinkAccent[100],
         child: ListView(
-          children: const [
-            TaskCard(
-              text: "Finalizar curso de flutter da Alura",
-              difficulty: 1,
-            ),
-            TaskCard(
-              text: "Finalizar instalação do Android Studio",
-              difficulty: 5,
-            ),
-            TaskCard(text: "Finalizar instalação do Flutter", difficulty: 4),
-            TaskCard(
-              text: "Finalizar curso de flutter da Udemy",
-              difficulty: 9,
-            ),
-            TaskCard(
-                text: "Finalizar instalação do Android Studio", difficulty: 7),
-          ],
+          children: TaskInherited.of(context).taskList,
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const FormScreen()));
+              MaterialPageRoute(
+                  builder: (contextNew) => FormScreen(
+                        taskContext: context,
+                      )));
         },
         child: const Icon(Icons.add),
       ),

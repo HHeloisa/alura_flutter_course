@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_project/constants.dart';
+import 'package:task_project/data/task_inherited.dart';
 import 'package:task_project/screens/home.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      // o TaskInherited precisa ser o mais alto na arvore, entao todo acessam ele
+      home: TaskInherited(child: const Home()),
     );
   }
 }

@@ -4,17 +4,19 @@ import '../constants.dart';
 import 'difficulty.dart';
 
 class TaskCard extends StatefulWidget {
-  const TaskCard({super.key, required this.text, required this.difficulty});
+  const TaskCard(
+      {super.key, required this.text, required this.difficulty, this.image});
 
   final String text;
   final int difficulty;
+  final String? image;
 
   @override
   State<TaskCard> createState() => _TaskCardState();
 }
 
 class _TaskCardState extends State<TaskCard> {
-  //colocar as variaevis pra cima do override se seus valores nao devem ser perdidos ao remontar a tela por uma atualização de widget
+  // colocar as variaevis pra cima do override se seus valores nao devem ser perdidos ao remontar a tela por uma atualização de widget
   int nivel = 0;
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,8 @@ class _TaskCardState extends State<TaskCard> {
                       height: 100,
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
-                          child: Image.network(imageByLevel(nivel),
+                          child: Image.network(
+                              imageByLevel(nivel, widget.image),
                               fit: BoxFit.cover)),
                     ),
                     Column(
@@ -117,8 +120,12 @@ class _TaskCardState extends State<TaskCard> {
 
 // Inves de seguir o tutorial, que passa imagem por parametro da mesma forma que o nome
 // criei uma função que retorna uma imagem diferente de acordo com o nivel da tarefa.
-imageByLevel(level) {
-  if (level < 5) {
+// também diferente do tutorial, coloquei as imagens como opcionais, se o usuario colocar
+// eu aplico ela, do contrario, mantenho a logica anterior, de imageByLevel.
+String imageByLevel(level, image) {
+  if (image != null) {
+    return image;
+  } else if (level < 5) {
     return charmander;
   } else if (level < 12) {
     return charmeleon;

@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:task_project/constants.dart';
+import 'package:task_project/data/task_inherited.dart';
 
 class FormScreen extends StatefulWidget {
-  const FormScreen({super.key});
+  const FormScreen({super.key, required this.taskContext});
+
+  final BuildContext taskContext;
 
   @override
   State<FormScreen> createState() => _FormScreenState();
 }
 
+// sobre contexto:
+// apenas a home esta ligada diretamente ao inheritedWidget. Isso quer dizer que outras paginas, como esta, nao tem acesso a ele
+// para permitir este acesso, o contexto da pagina (no caso a home) precisa ser passado pra pagina seguinte, na hora da navegação
+// a nova pagina obviamente precisa receber este contexto, e, ao se referir ao InheritedWidget, deve fornecer este conxto, o que tem os dados
 class _FormScreenState extends State<FormScreen> {
   TextEditingController nameController = TextEditingController();
   TextEditingController difficultyController = TextEditingController();
@@ -74,7 +81,7 @@ class _FormScreenState extends State<FormScreen> {
                       textAlign: TextAlign.center,
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: "Dificuldade (1-5)",
+                          hintText: "dificuldade (1-5)",
                           fillColor: Colors.white70,
                           filled: true),
                     ),
@@ -82,12 +89,6 @@ class _FormScreenState extends State<FormScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
-                      validator: (String? value) {
-                        if (value!.isEmpty) {
-                          return "Insira uma URL de imagem";
-                        }
-                        return null;
-                      },
                       keyboardType: TextInputType.url,
                       onChanged: (text) => {setState((() {}))},
                       controller: imageController,
@@ -118,12 +119,17 @@ class _FormScreenState extends State<FormScreen> {
                   ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          // passa por parametro de contexto, o contexto recebido pela pagina, o contexto no qual contem o inherited, a tasklist
+                          TaskInherited.of(widget.taskContext).newTask(
+                              nameController.text,
+                              int.parse(difficultyController.text),
+                              imageController.text);
                           ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                  content: Text("Salvando novo conhecimento")));
+                                  content:
+                                      Text("Registrando novo conhecimento")));
                           Navigator.pop(context);
                         }
-                        
                       },
                       child: const Text("Adicionar"))
                 ],
