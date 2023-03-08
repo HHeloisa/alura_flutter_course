@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:task_project/components/taskcard.dart';
 import 'package:task_project/constants.dart';
-import 'package:task_project/data/task_inherited.dart';
+import 'package:task_project/data/task_dao.dart';
+// import 'package:task_project/data/task_inherited.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({super.key, required this.taskContext});
@@ -31,7 +33,7 @@ class _FormScreenState extends State<FormScreen> {
 
   bool difficultyValidator(String? value) {
     if (valueValidator(value)) {
-      if ((int.parse(value!) < 5) && (int.parse(value) > 0)) {
+      if ((int.parse(value!) <= 5) && (int.parse(value) > 0)) {
         return true;
       }
     }
@@ -134,10 +136,14 @@ class _FormScreenState extends State<FormScreen> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           // passa por parametro de contexto, o contexto recebido pela pagina, o contexto no qual contem o inherited, a tasklist
-                          TaskInherited.of(widget.taskContext).newTask(
-                              nameController.text,
-                              int.parse(difficultyController.text),
-                              imageController.text);
+                          // TaskInherited.of(widget.taskContext).newTask(
+                          //     nameController.text,
+                          //     int.parse(difficultyController.text),
+                          //     imageController.text);
+                          TaskDao().save(TaskCard(
+                              name: nameController.text,
+                              difficulty: int.parse(difficultyController.text),
+                              image: imageController.text));
                           ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
                                   content:
