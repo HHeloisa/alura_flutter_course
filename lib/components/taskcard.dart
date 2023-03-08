@@ -6,9 +6,9 @@ import 'difficulty.dart';
 // ignore: must_be_immutable
 class TaskCard extends StatefulWidget {
   TaskCard(
-      {super.key, required this.text, required this.difficulty, this.image});
+      {super.key, required this.name, required this.difficulty, this.image});
 
-  final String text;
+  final String name;
   final int difficulty;
   final String? image;
   int nivel = 0;
@@ -57,7 +57,7 @@ class _TaskCardState extends State<TaskCard> {
                       children: [
                         SizedBox(
                             width: 200,
-                            child: Text(widget.text,
+                            child: Text(widget.name,
                                 style: const TextStyle(
                                   fontSize: 18,
                                   overflow: TextOverflow.fade,
