@@ -1,4 +1,4 @@
-Este projeto está sendo desenvolvido ao longo do curso de Flutter da Alura.
+Este projeto está sendo desenvolvido ao longo da trila de cursos de Flutter da Alura.
 Etapas do curso concluídas:<p>
 ✅Flutter: Controller, navegação e estados;<p>
 ✅Flutter: widgets, stateless, stateful, imagens e animações;<p>
