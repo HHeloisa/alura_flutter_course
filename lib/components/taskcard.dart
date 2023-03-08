@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'difficulty.dart';
 
+// ignore: must_be_immutable
 class TaskCard extends StatefulWidget {
   TaskCard(
       {super.key, required this.text, required this.difficulty, this.image});
