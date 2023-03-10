@@ -1,14 +1,10 @@
-![Thumbnail GitHub](https://raw.githubusercontent.com/alura-cursos/alura_flutter_curso_7/master/Card%20Testes.png)
+# 🔨 Projeto: AluraBank
 
-# Flutter: Testes de Unidade, de Widgets e Mocks
+## Curso Flutter: Testes de Unidade, de Widgets e Mocks
 
-Esse curso de Flutter me ensinou a: Verificar um código desconhecido; Criar mecanismos de Qualidade para seu produto; Formular testes; Utilizar métodos de busca de Widget sofisticados; Criar confiabilidade ao seu código.
-
-## 🔨 Projeto: AluraBank
+Esse curso de Flutter me ensinou a: verificar um código desconhecido; criar mecanismos de qualidade para seu produto; formular testes; utilizar métodos de busca de widget sofisticados; criar confiabilidade ao seu código.
 
 ## ✔️ Técnicas e tecnologias
-
-**Veja mais de perto o que você aprenderá sobre** :
 - `Teste de Unidade`: Teste capaz de verificar pequenos objetos.
 - `Teste de Widget`: Teste capaz de  verificar Widgets e suas dependencias, com construção de tela.
 - `test()`: método capaz de iniciar um teste.
