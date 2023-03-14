@@ -17,7 +17,7 @@ class _AlubankState extends State<Alubank> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: MyTheme,
+      theme: myTheme,
       
       title: "Alubank",
       home: const Home()
