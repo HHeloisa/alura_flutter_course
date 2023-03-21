@@ -10,8 +10,8 @@ Cursos da trilha já concluídos:<p>
 ✅Flutter: Controller, navegação e estados;<p>
 ✅Flutter: widgets, stateless, stateful, imagens e animações;<p>
 ✅Flutter: aplicando persistência de estado.<p>
-👩🏽‍💻Flutter com WebAPI: integrando sua aplicação.<p>
-⏲️Flutter com WebAPI: evoluindo na integrando da aplicação.<p>
+✅Flutter com WebAPI: integrando sua aplicação.<p>
+💻Flutter com WebAPI: evoluindo na integrando da aplicação.<p>
 ✅Flutter: estilizando e reproduzindo layouts.<p>
 ✅Flutter: aplicando constraints e implementando layouts responsivos.<p>
 ✅ Flutter: aplicando testes de unidade, de Widget e Mocks<p>
