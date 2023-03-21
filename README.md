@@ -6,6 +6,8 @@ A branch "flutter_basics" engloba um unico projeto desenvolvido ao longo de trê
 
 A branch "style_layout" abriga o projeto desenvolvido ao longo do curso "Flutter: estilizando e reproduzindo layouts", que aprofunda na reprodução de layouts do figma, na personalização e aplicação de um tema, na adição de novas famílias de fontes de texto, criação de paleta de cores, e aplicação de widgets novos como InkWell e Ink e mais.
 
+A branch "web_api" envolve o projeto desenvolvido ao longo do curso "Flutter com WebApi: integrando sa aplicação", que intensifica os conhecimentos sobre WebAPI, a utilização da biblioteca HTTP, UUID, interceptores, APIREST.
+
 Cursos da trilha já concluídos:<p>
 ✅Flutter: Controller, navegação e estados;<p>
 ✅Flutter: widgets, stateless, stateful, imagens e animações;<p>
