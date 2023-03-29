@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "email": "heloisa@teste.com",
+      "password": "$2a$10$EsdYvlMw7jnF/Lc4eDALgugHhPGeCyjLpgN/lp92pTozfWRhiILxm",
+      "id": 1
+    },
+    {
+      "email": "heloisa@dteste.com",
+      "password": "$2a$10$HsA9obP.paTK05lBWTqj0uyE66AW0WwzKq4IfshURLbZlK5tyDb06",
+      "id": 2
+    },
+    {
+      "email": "giliane@teste.com",
+      "password": "$2a$10$S6aMmQ57NTk4jE3Kdu3aIurtG2nW/ExJlLbVGvzX/dbriVBruJ/9O",
+      "id": 3
+    },
+    {
+      "email": "testando@teste.com",
+      "password": "$2a$10$H4ZKvWo4M6FD8lb0.jTor.cpEcDoxoJ0Wak4VBlrRGulOMPTMlR.C",
+      "id": 4
+    },
+    {
+      "email": "testando@muito.com",
+      "password": "$2a$10$PbkdlMqAibseOpTVajxzxuQ9cozdjOq6ihLVCpUSeejfq9dywZqfe",
+      "id": 5
+    }
+  ],
+  "journals": [
+    {
+      "id": "70611440-c82c-11ed-bf68-47a8681cb1ab",
+      "content": "segunda dia 20",
+      "created_at": "2023-03-20 21:04:42.438419",
+      "updated_at": "2023-03-20 21:04:42.438419",
+      "userId": 1
+    },
+    {
+      "id": "41edcb20-c82d-11ed-bf68-47a8681cb1ab",
+      "content": "dia 16 em agosto é aniversario da gili <3 e eu amo",
+      "created_at": "2023-03-16 21:04:42.438419",
+      "updated_at": "2023-03-16 21:04:42.438419",
+      "userId": 1
+    },
+    {
+      "id": "\"d45c29c0-c8e1-11ed-b99e-b5735e5147a7\"",
+      "content": "user2",
+      "created_at": "2023-03-12 17:54:30.048048",
+      "updated_at": "2023-03-12 17:54:30.048048",
+      "userId": 2
+    },
+    {
+      "id": "15a24c30-ccdd-11ed-a7ad-d525bb10b9b9",
+      "content": "domingouuu",
+      "created_at": "2023-03-19 20:22:17.568877",
+      "updated_at": "2023-03-19 20:22:17.568877",
+      "userId": 4
+    },
+    {
+      "id": "196dfa30-ccdd-11ed-a7ad-d525bb10b9b9",
+      "content": "kkkkkkkk",
+      "created_at": "2023-03-18 20:22:17.568877",
+      "updated_at": "2023-03-18 20:22:17.568877",
+      "userId": 4
+    }
+  ]
+}
