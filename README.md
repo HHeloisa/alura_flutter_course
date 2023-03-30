@@ -8,6 +8,8 @@ A branch "style_layout" abriga o projeto desenvolvido ao longo do curso "Flutter
 
 A branch "web_api" envolve o projeto desenvolvido ao longo do curso "Flutter com WebApi: integrando sa aplicação", que intensifica os conhecimentos sobre WebAPI, a utilização da biblioteca HTTP, UUID, interceptores, APIREST.
 
+A branch "provider" comporta o projeto desenvolvido ao longo do curso "Flutter: gerenciamento de estados com provider", que aborda o uso do provider, através do consumer e provider.of, e a importancia do notifyListeners() e setState().
+
 Cursos da trilha já concluídos:<p>
 ✅Flutter: Controller, navegação e estados;<p>
 ✅Flutter: widgets, stateless, stateful, imagens e animações;<p>
@@ -16,5 +18,5 @@ Cursos da trilha já concluídos:<p>
 ✅Flutter com WebAPI: evoluindo na integrando da aplicação.<p>
 ✅Flutter: estilizando e reproduzindo layouts.<p>
 ✅Flutter: aplicando constraints e implementando layouts responsivos.<p>
-✅ Flutter: aplicando testes de unidade, de Widget e Mocks<p>
-⏲️Flutter: gerenciamento de estados com provider<p>
+✅Flutter: aplicando testes de unidade, de Widget e Mocks<p>
+✅Flutter: gerenciamento de estados com provider<p>
